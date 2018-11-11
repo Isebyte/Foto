@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,49 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Foto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HJg-cA-1FX">
+                                <rect key="frame" x="16" y="42" width="343" height="385"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSf-at-U2A">
+                                <rect key="frame" x="120" y="476" width="134" height="30"/>
+                                <state key="normal" title="Photo from Camera"/>
+                                <connections>
+                                    <action selector="photoFromCameraBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nj6-aY-AoD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcq-ee-Zn5">
+                                <rect key="frame" x="123" y="533" width="129" height="30"/>
+                                <state key="normal" title="Photo from Gallery"/>
+                                <connections>
+                                    <action selector="photoFromGalleryBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F7W-eu-Ro5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cSf-at-U2A" firstAttribute="top" secondItem="HJg-cA-1FX" secondAttribute="bottom" constant="49" id="Coj-ft-ckF"/>
+                            <constraint firstItem="HJg-cA-1FX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JeK-Sa-eIs"/>
+                            <constraint firstItem="HJg-cA-1FX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Lbm-5g-ony"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pcq-ee-Zn5" secondAttribute="bottom" constant="104" id="MLl-v5-j9o"/>
+                            <constraint firstItem="pcq-ee-Zn5" firstAttribute="top" secondItem="cSf-at-U2A" secondAttribute="bottom" constant="27" id="QBL-xS-UOU"/>
+                            <constraint firstItem="HJg-cA-1FX" firstAttribute="centerX" secondItem="cSf-at-U2A" secondAttribute="centerX" id="i7S-oX-xqQ"/>
+                            <constraint firstItem="cSf-at-U2A" firstAttribute="centerX" secondItem="pcq-ee-Zn5" secondAttribute="centerX" id="pUm-Bs-awx"/>
+                            <constraint firstItem="HJg-cA-1FX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="tgQ-r5-FqL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="HJg-cA-1FX" id="WQI-NG-pAa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
