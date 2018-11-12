@@ -14,5 +14,6 @@ The plan is to create a photo editing app with unique option to design posters a
 - (If feasible) Add animated effects
 - (If feasible) Make your own animation! Think nintendo flipnote
 
-### See: https://www.spaceotechnologies.com/ios-tutorial-make-photo-editing-app-like-retrica/
+### Credits: 
+- https://www.spaceotechnologies.com/ios-tutorial-make-photo-editing-app-like-retrica/
 
