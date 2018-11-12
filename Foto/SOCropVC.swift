@@ -4,7 +4,8 @@
 //
 //  Created by Isabelle Xu on 11/12/18.
 //  Copyright © 2018 WashU. All rights reserved.
-//
+//  Credits: https://www.spaceotechnologies.com/ios-tutorial-make-photo-editing-app-like-retrica/
+//  (Contents editied to Swift 4.0 syntax for this project's purposes)
 
 //
 //  SOImageImageCropViewController.swift
